@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Formularios</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="cadastro">
+        <h1> Formulario de Cadastro</h1>
+        <br><br>
+        <form action="">
+            <!--Label for indentifica o id do input
+            name: utiliza para associar ao JS
+            placegolder: exibe a informação a ser digitada dentro do espaço digitavel
+            maxlength: tamanho de caracters no espaço
+            autofocus required: o cursor é posicionado no inicio do imput-->
+
+            <label for="inome">Nome:</label>
+            <input type="text" id="inome" name="inome" placeholder="Digite o seu Nome" maxlength="30" autofocus required> 
+            <br><br>
+            <label for="ltdnasc">Data de Nascimento</label>
+            <input type="date" name="idtnasc" id="ltdnasc"min="1950-01-01" max="2025-01-01">
+            <label for="lIdade">Idade</label>
+            <input type="number" name="nidade" id="iIdade" min="18"max="60">
+            <br><br>
+            <label for="lMaior">Maior de Idade</label>
+            <input type="checkbox"name="iMaior" id="lMaior">
+            <label for="ISexo">Sexo:</label>
+            <input type="radio" name="iSexo" id="lSexo" value="F"  >Feminino
+            <input type="radio" name="iSexo" id="lSexo" value="M" checked >Masculino
+            <br><br>            
+            <label for="lhorarioentrevista">Horario da Entrevista</label>
+            <input type="time" name="horario" id="lhorarioentrevista">
+            <br><br>
+            <label for="lsitePessoal">Site Pessoal</label>
+            <input type="url" name="isitePessoal"id="lsitePessoal" value="https://www.google.com.br/?hl=pt-BR">
+            <br><br>
+            <label for="lTelefone">Telefone</label>
+            <input type="tel" name="iTelefone" id="lTelefone" pattern="[0-9]{5}-[0-9]{4}" placeholder="99999-9999">
+            <br><br>
+            <label for="lTempExp">Tempo de Experiencia</label>
+            <input list="lTempoExp">
+                <datalist id="lTempoExp">
+                    <option value="Menos de um ano">Novato</option>
+                    <option value="Entre 2 e 5 anos">Pleno</option>
+                    <option value="Mais de 5 anos">Senior</option>
+                </datalist>
+            <br><br>
+            <label for="lDataHorarioEntrevista">Data/Horario Entrevista:</label>
+            <input type="datetime-local" name="nDatahorarioEntrevista" id="lDataHorarioEntrevista">
+            <br><br>
+            <label for="lEmail">E-mail:</label>
+            <input type="email" name="nEmail" id="lEmail">
+            <br><br>
+            <label for="lUltimoEmprego">Data último emprego</label>
+            <input type="month" name="nUltimoEmprego" id="lUltimoEmprego">
+            <br><br>
+            <label for="lConhecimento">Conhecimento em Informatica</label>
+                <select name="iConhecimento" id="iConhecimento" size="3" multiple>
+                    <option value="win">Windows</option>
+                    <option value="Word">Word</option>
+                    <option value="Excel">Excel</option>
+                    <option value="html">HTML</option>
+                </select>
+                <br><br>
+            <label for="lArquivo">Arquivo</label>
+            <input type="file" name="nArquivo" id="lArquivo" accept=".docx">
+            <br><br>
+            <label for="lCor">Selecione uma Cor</label>               
+            <input type="color" name="iCor" id="iCor">
+            <br><br>
+            <label for="iSenha">Digite a Senha</label>
+            <input type="password" name="iSenha" id="lSenha">
+                    
+            <br><br>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+                
+        </form>
+
+
+
+
+    </div>
+</body>
+</html>
